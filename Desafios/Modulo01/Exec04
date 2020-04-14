@@ -1,0 +1,30 @@
+// Desestruturação Simples
+const empresa = {
+    nome: 'Rocketseat',
+    endereco: {
+        cidade: 'Rio do Sul',
+        estado: 'SC',
+    }
+};
+
+const { nome, endereco: { cidade, estado } } = empresa;
+
+console.log(nome);
+console.log(cidade);
+console.log(estado);
+
+// Desestruturação em parâmetros
+const usuario = {
+    nome: 'Kurt',
+    idade: 28,
+    endereco: {
+        cidade: 'Cuiabá',
+        estado: 'MT',
+    },
+};
+
+function mostraInfo({ nome, idade }) { 
+    console.log(`${nome} tem ${idade} anos.`);
+}
+    mostraInfo(usuario);
+

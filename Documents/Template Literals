@@ -1,0 +1,4 @@
+const nome = 'Kurt';
+const idade = 28;
+// Template Literals
+console.log(`Meu nome é ${nome} e tenho ${idade} anos.`);

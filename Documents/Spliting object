@@ -1,0 +1,16 @@
+const usuario = {
+    nome: 'Kurt',
+    idade: 28,
+    endereco: {
+        cidade: 'Cuiabá',
+        estado: 'MT',
+    },
+};
+
+function mostraNome({ nome, idade }) {
+    console.log(nome, idade);
+}
+
+mostraNome(usuario);
+
+

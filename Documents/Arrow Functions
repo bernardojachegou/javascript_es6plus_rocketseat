@@ -1,0 +1,14 @@
+const arr = [1, 2, 4, 5, 8, 10];
+
+// Sem Arrow Function
+// const newArr = arr.map(function(item) {
+//     return item + 2;
+// });
+
+//Com Arrow Function
+const newArr = arr.map(item => item + 2);
+console.log(newArr);
+
+const teste = () => ({ name: 'Kurt' }); //Retornando objeto
+
+console.log(teste());

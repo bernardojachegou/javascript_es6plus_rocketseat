@@ -1,0 +1,10 @@
+//Object Short Syntax
+const nome = 'Kurt';
+const idade = 28;
+
+const usuario = {
+    nome,
+    idade,
+    empresa: 'Rocketseat'
+};
+console.log(usuario);

@@ -1,0 +1,43 @@
+//REST
+const usuario = {
+    nome: 'Kurt',
+    idade: 28,
+    emmpresa: 'Rocketseat'
+};
+
+const { nome, ...resto } = usuario;
+
+console.log(nome);
+console.log(resto);
+
+const arr = [2, 3, 6, 8];
+
+const [a, b, ...c] = arr;
+
+console.log(a);
+console.log(b);
+console.log(c);
+
+function soma(...params) {
+    return params.reduce((total, next) => total + next);
+}
+
+console.log(soma(1, 4, 5)); 
+
+//SPREAD
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+
+const arr3 = [...arr1, ...arr2]; //União de arrays
+
+console.log(arr3);
+
+const usuario1 = {
+    nome: 'Michel',
+    idade: 21,
+    emmpresa: 'Alura'
+}
+
+const usuario2 = { ...usuario1, nome: 'Roberto'}; //Pegando propriedades de um objeto
+
+console.log(usuario2);
