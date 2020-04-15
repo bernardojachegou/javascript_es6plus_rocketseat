@@ -1,11 +1,24 @@
-//Trecho 04
-//Sem Arrow function
-const promise = function() {  return new Promise(function(resolve, reject) {
-    return resolve();  })}
+class Usuario {
+    constructor(email, senha) {
+        this.email = email;
+        this.senha = senha;
+    }
 
-//Com Arrow Function
-const promise = new Promise( (resolve, reject) => { resolve() } );
+    isAdmin() {
+        return this.admin === true;
+    }
+}
 
-console.log(promise);
+class Admin extends Usuario {
+    constructor(email, senha) {
+        super(email, senha);
 
-    
+        this.admin = true;
+    }
+}
+
+const User1 = new Usuario('email@teste.com', 'senha123');
+const Adm1 = new Admin('email@teste.com', 'senha123');
+
+console.log(User1.isAdmin()) // false
+console.log(Adm1.isAdmin()) // true

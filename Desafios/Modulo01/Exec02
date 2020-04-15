@@ -1,0 +1,21 @@
+const usuarios = [  
+    { nome: 'Diego', idade: 23, empresa: 'Rocketseat' },  
+    { nome: 'Gabriel', idade: 15, empresa: 'Rocketseat' },  
+    { nome: 'Lucas', idade: 30, empresa: 'Facebook' },
+];
+
+//Retornando idade dos usuários
+const userIdade = usuarios.map(usuario => usuario.idade);
+console.log(userIdade);
+
+//Retornando usuário específico (Diego)
+const retornaDiego = usuarios.filter(usuario => usuario.empresa === "Rocketseat" & usuario.idade >= 18);
+console.log(retornaDiego);
+
+//Retorna usuário que trabalha na Google
+const trabalhaGoogle = usuarios.find(usuario => usuario.empresa === "Google");
+console.log(trabalhaGoogle);
+
+//Retorna usuario com idades multiplicadas por 2 e com idade <= 50 anos
+const calculaEbusca = usuarios.map(usuario => ({ ...usuario, idade: usuario.idade * 2 })).filter(usuario => usuario.idade <= 50);
+console.log(calculaEbusca);
