@@ -1,0 +1,26 @@
+export const idade = 23;
+
+export default class Usuario {
+    static info() {
+        console.log('Apenas teste');
+    }
+}
+
+//Importando a função e renomeando-a
+import classeUsuario from '../functions';
+
+classeUsuario.info();
+
+//Importando uma classe específica
+import { idade } from '../functions';
+
+console.log(idade);
+
+//Importando e alterando a função e a const
+import classeUsuario, { idade as idadeUsuario } from '../functions';
+
+classeUsuario.info();
+console.log(idadeUsuario);
+
+
+
